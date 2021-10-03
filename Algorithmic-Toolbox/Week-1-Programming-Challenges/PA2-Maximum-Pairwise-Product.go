@@ -1,15 +1,11 @@
-/*
-In this programming challenge,
-your goal is to implement a program that works in less than one second even on huge datasets.
-*/
-package Week_1
+package Week_1_Programming_Challenges
 
 import (
 	"fmt"
 	"math/big"
 )
 
-func MaximumPairwiseProduct(){
+func MaximumPairwiseProduct() {
 	var n int
 	fmt.Scan(&n)
 
@@ -45,7 +41,7 @@ func MaximumPairwiseProduct(){
 			imin2 = idx
 		}
 	}
-	//fmt.Println(imax1, imax2, imin1, imin2)
+
 	if inputDataSet[imin2]*inputDataSet[imin1] > inputDataSet[imax2]*inputDataSet[imax1] {
 		// Произведение минимальных
 		fmt.Println(big.NewInt(int64(inputDataSet[imax2]) * int64(inputDataSet[imax1])))
@@ -54,4 +50,3 @@ func MaximumPairwiseProduct(){
 		fmt.Println(big.NewInt(int64(inputDataSet[imax2]) * int64(inputDataSet[imax1])))
 	}
 }
-
