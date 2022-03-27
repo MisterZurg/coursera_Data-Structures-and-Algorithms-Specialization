@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// TODO
 // NumberofInversions counts the number of inversions of a given sequence.
 func NumberofInversions(seq []int) int {
 	_, inversions := MergeSort(seq)
@@ -36,11 +37,11 @@ func Merge(seqLeft, seqRight []int) ([]int, int) {
 		if left <= right {
 			// move left from seqLeft to the end of seqResult
 			seqResult[resIdx] = left
-			pairs++
 			l++
 		} else {
 			// move right from seqRight to the end of seqResult
 			seqResult[resIdx] = right
+			pairs += len(seqLeft) - l
 			r++
 		}
 		resIdx++
